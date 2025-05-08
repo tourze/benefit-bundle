@@ -20,6 +20,14 @@ composer require tourze/benefit-bundle
 
 待补充
 
+## 开发
+
+### 运行测试
+
+```bash
+./vendor/bin/phpunit packages/benefit-bundle/tests
+```
+
 ## 参考文档
 
 - [示例链接](https://example.com)
