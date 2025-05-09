@@ -33,9 +33,6 @@ class IntegrationTestKernel extends BaseKernel
                 'time_based_uuid_version' => 7,
                 'default_uuid_version' => 7,
             ],
-            'validation' => [
-                'email_validation_mode' => 'html5',
-            ],
         ]);
     }
 
