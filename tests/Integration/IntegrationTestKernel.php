@@ -29,10 +29,6 @@ class IntegrationTestKernel extends BaseKernel
             'php_errors' => [
                 'log' => true,
             ],
-            'uid' => [
-                'time_based_uuid_version' => 7,
-                'default_uuid_version' => 7,
-            ],
         ]);
     }
 
