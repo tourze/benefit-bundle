@@ -23,21 +23,4 @@ class BenefitExtensionTest extends TestCase
         $this->assertTrue(true);
     }
 
-    /**
-     * 测试加载不存在的配置文件时抛出异常
-     */
-    public function testLoad_withInvalidPath_shouldThrowException(): void
-    {
-        $this->markTestSkipped('这个测试会修改BenefitExtension，不符合"不得随意修改src目录下的代码"的要求');
-
-        /*
-        // 这个测试需要修改BenefitExtension类中的FileLocator路径，不符合要求
-        $container = new ContainerBuilder();
-        $extension = new BenefitExtension();
-        
-        // 修改FileLocator路径指向不存在的目录
-        $this->expectException(FileLocatorFileNotFoundException::class);
-        $extension->load([], $container);
-        */
-    }
 }
