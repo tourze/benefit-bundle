@@ -1,0 +1,8 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  # DataFixtures should only be available in dev environment
+  BenefitBundle\DataFixtures\BenefitFixtures:
+    tags: ['doctrine.fixture.orm']

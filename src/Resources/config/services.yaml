@@ -4,5 +4,11 @@ services:
     autowire: true      # Automatically injects dependencies in your services.
     autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
-#  BenefitBundle\Command\:
-#    resource: '../../Command/'
+  # Repositories
+  BenefitBundle\Repository\BenefitRepository: ~
+
+  # Controllers
+  BenefitBundle\Controller\Admin\BenefitCrudController: ~
+
+  # Services
+  BenefitBundle\Service\AdminMenu: ~
