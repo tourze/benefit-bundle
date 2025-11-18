@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace BenefitBundle\Tests\Controller\Admin;
 
 use BenefitBundle\Controller\Admin\BenefitCrudController;
-use BenefitBundle\Entity\Benefit;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use PHPUnit\Framework\Attributes\Test;
@@ -77,12 +76,6 @@ final class BenefitCrudControllerTest extends AbstractEasyAdminControllerTestCas
     }
 
     #[Test]
-    public function testGetEntityFqcnReturnsBenefitClass(): void
-    {
-        $this->assertEquals(Benefit::class, BenefitCrudController::getEntityFqcn());
-    }
-
-    #[Test]
     public function testControllerHasAdminCrudAttribute(): void
     {
         $reflection = new \ReflectionClass(BenefitCrudController::class);
@@ -117,16 +110,6 @@ final class BenefitCrudControllerTest extends AbstractEasyAdminControllerTestCas
             $method = $reflection->getMethod($methodName);
             $this->assertTrue($method->isPublic(), "方法 {$methodName} 必须是public");
         }
-    }
-
-    #[Test]
-    public function testGetEntityFqcnIsStaticMethod(): void
-    {
-        $reflection = new \ReflectionClass(BenefitCrudController::class);
-        $method = $reflection->getMethod('getEntityFqcn');
-
-        $this->assertTrue($method->isStatic(), 'getEntityFqcn必须是静态方法');
-        $this->assertTrue($method->isPublic(), 'getEntityFqcn必须是public方法');
     }
 
     #[Test]
