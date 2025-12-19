@@ -4,7 +4,7 @@ namespace BenefitBundle\DependencyInjection;
 
 use Tourze\SymfonyDependencyServiceLoader\AutoExtension;
 
-class BenefitExtension extends AutoExtension
+final class BenefitExtension extends AutoExtension
 {
     protected function getConfigDir(): string
     {
